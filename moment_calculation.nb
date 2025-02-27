@@ -1,0 +1,222 @@
+Notebook[{Cell[
+TextData[{"Moment"," ","generating"," ","function"}],"Text",ExpressionUUID -> "e4daaa25-0334-4744-8bed-fa6460359ebf"],Cell[
+TextData[
+{"Assume"," ",Cell[
+BoxData[TemplateBox[Association["boxes" -> FormBox[RowBox[{RowBox[
+{"(",RowBox[{StyleBox["X","TI"],",",StyleBox["Y","TI"]}],")"}],"\[Tilde]",StyleBox[
+"N","TI"],RowBox[{"(",RowBox[{RowBox[{"(",RowBox[{SubscriptBox["\[Mu]",StyleBox["X",
+"TI"]],",",SubscriptBox["\[Mu]",StyleBox["Y","TI"]]}],")"}],",","\[CapitalSigma]"}],")"}]}],
+TraditionalForm],"errors" -> {},"input" -> "(X,Y)\\sim N((\\mu_X,\\mu_Y),\\Sigma)",
+"state" -> "Boxes"],"TeXAssistantTemplate"]],ExpressionUUID -> "d42111b3-fc96-45d0-b72b-5c556bc0e6bb"],StyleBox[
+RowBox[{","," "}]],"we"," ","will"," ","calculate"," ",Cell[
+BoxData[TemplateBox[
+Association["boxes" -> FormBox[RowBox[{SubscriptBox[StyleBox["M","TI"],RowBox[{StyleBox[
+"X","TI"],",",StyleBox["Y","TI"]}]],"(",RowBox[{StyleBox["a","TI"],",",StyleBox["b",
+"TI"]}],")"}],TraditionalForm],"errors" -> {},"input" -> "M_{X,Y}(a,b)","state" -> "Boxes"],
+"TeXAssistantTemplate"]],ExpressionUUID -> "3d36a9dd-1e8e-4eba-a56b-531d39110328"]}],
+"Text",ExpressionUUID -> "925dde43-0046-4bed-8626-a71cabcf71f3"],Cell[
+BoxData[RowBox[
+{RowBox[{"F","[",RowBox[{"a_",",","b_"}],"]"}],":=",RowBox[{"Exp","[",RowBox[{RowBox[
+{"a"," "," ",TemplateBox[Association["boxes" -> FormBox[SubscriptBox["\[Mu]",StyleBox[
+"X","TI"]],TraditionalForm],"errors" -> {},"input" -> "\\mu_X","state" -> "Boxes"],
+"TeXAssistantTemplate"]}],"+",RowBox[{"b",TemplateBox[Association["boxes" -> FormBox[
+SubscriptBox["\[Mu]",StyleBox["Y","TI"]],TraditionalForm],"errors" -> {},"input" -> "\\mu_Y",
+"state" -> "Boxes"],"TeXAssistantTemplate"]}],"+",RowBox[{"(",RowBox[{RowBox[{RowBox[
+{"1","/","2"}],RowBox[{"a","^","2"}]," ",TemplateBox[Association["boxes" -> FormBox[
+SubscriptBox["\[Sigma]","11"],TraditionalForm],"errors" -> {},"input" -> "\\sigma_{11}",
+"state" -> "Boxes"],"TeXAssistantTemplate"]}],"+",RowBox[{"a"," ","b"," ",TemplateBox[
+Association["boxes" -> FormBox[SubscriptBox["\[Sigma]","12"],TraditionalForm],"errors" -> {},
+"input" -> "\\sigma_{12}","state" -> "Boxes"],"TeXAssistantTemplate"]}],"+",RowBox[
+{RowBox[{"1","/","2"}]," ",RowBox[{"b","^","2"}]," ",TemplateBox[Association["boxes" -> FormBox[
+SubscriptBox["\[Sigma]","22"],TraditionalForm],"errors" -> {},"input" -> "\\sigma_{22}",
+"state" -> "Boxes"],"TeXAssistantTemplate"]}]}],")"}]}],"]"}]}]],"Input",CellLabel -> "In[11]:= ",
+ExpressionUUID -> "b65c99d0-24bc-4ce2-9ec6-ecad4ec8481d"],Cell[
+CellGroupData[{Cell[
+BoxData[
+RowBox[{"F","[",RowBox[{"a",",","b"}],"]"}]],"Input",CellLabel -> "In[12]:= ",ExpressionUUID -> "be055c27-5ff4-4ec3-9e46-9b3c00af0a36"],Cell[
+BoxData[
+SuperscriptBox["\[ExponentialE]",RowBox[{RowBox[{"a"," ",SubscriptBox["\[Mu]","X"]}],"+",RowBox[
+{"b"," ",SubscriptBox["\[Mu]","Y"]}],"+",FractionBox[RowBox[{SuperscriptBox["a","2"]," ",SubscriptBox[
+"\[Sigma]","11"]}],"2"],"+",RowBox[{"a"," ","b"," ",SubscriptBox["\[Sigma]","12"]}],"+",FractionBox[
+RowBox[{SuperscriptBox["b","2"]," ",SubscriptBox["\[Sigma]","22"]}],"2"]}]],StandardForm],
+"Output",CellLabel -> "Out[12]= ",ExpressionUUID -> "0a508ca7-218e-418f-834a-7554b8b10ace"]},
+Open],ExpressionUUID -> "f364d653-2ee0-447d-abd8-88d8217249a7"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"FullSimplify","[",RowBox[{"D","[",RowBox[{RowBox[{"F","[",RowBox[
+{"a",",","b"}],"]"}],",",RowBox[{"{",RowBox[{"a",",","2"}],"}"}],",",RowBox[{"{",RowBox[
+{"b",",","2"}],"}"}]}],"]"}],"]"}]],"Input",CellLabel -> "In[13]:= ",ExpressionUUID -> "bf3cc6f9-2968-4018-b4e9-d458bd8bad0d"],Cell[
+BoxData[
+RowBox[{SuperscriptBox["\[ExponentialE]",RowBox[{RowBox[{"a"," ",SubscriptBox["\[Mu]",
+"X"]}],"+",RowBox[{"b"," ",SubscriptBox["\[Mu]","Y"]}],"+",FractionBox[RowBox[{SuperscriptBox[
+"a","2"]," ",SubscriptBox["\[Sigma]","11"]}],"2"],"+",RowBox[{"a"," ","b"," ",SubscriptBox[
+"\[Sigma]","12"]}],"+",FractionBox[RowBox[{SuperscriptBox["b","2"]," ",SubscriptBox[
+"\[Sigma]","22"]}],"2"]}]]," ",RowBox[{"(",RowBox[{RowBox[{"2"," ",SubsuperscriptBox[
+"\[Sigma]","12","2"]}],"+",RowBox[{"4"," ",SubscriptBox["\[Sigma]","12"]," ",RowBox[
+{"(",RowBox[{SubscriptBox["\[Mu]","X"],"+",RowBox[{"a"," ",SubscriptBox["\[Sigma]",
+"11"]}],"+",RowBox[{"b"," ",SubscriptBox["\[Sigma]","12"]}]}],")"}]," ",RowBox[{"(",RowBox[
+{SubscriptBox["\[Mu]","Y"],"+",RowBox[{"a"," ",SubscriptBox["\[Sigma]","12"]}],"+",RowBox[
+{"b"," ",SubscriptBox["\[Sigma]","22"]}]}],")"}]}],"+",RowBox[{SubscriptBox["\[Sigma]",
+"11"]," ",RowBox[{"(",RowBox[{SubscriptBox["\[Sigma]","22"],"+",SuperscriptBox[RowBox[
+{"(",RowBox[{SubscriptBox["\[Mu]","Y"],"+",RowBox[{"a"," ",SubscriptBox["\[Sigma]",
+"12"]}],"+",RowBox[{"b"," ",SubscriptBox["\[Sigma]","22"]}]}],")"}],"2"]}],")"}]}],"+",RowBox[
+{SuperscriptBox[RowBox[{"(",RowBox[{SubscriptBox["\[Mu]","X"],"+",RowBox[{"a"," ",SubscriptBox[
+"\[Sigma]","11"]}],"+",RowBox[{"b"," ",SubscriptBox["\[Sigma]","12"]}]}],")"}],"2"]," ",RowBox[
+{"(",RowBox[{SubscriptBox["\[Sigma]","22"],"+",SuperscriptBox[RowBox[{"(",RowBox[
+{SubscriptBox["\[Mu]","Y"],"+",RowBox[{"a"," ",SubscriptBox["\[Sigma]","12"]}],"+",RowBox[
+{"b"," ",SubscriptBox["\[Sigma]","22"]}]}],")"}],"2"]}],")"}]}]}],")"}]}],StandardForm],
+"Output",CellLabel -> "Out[13]= ",ExpressionUUID -> "ef109711-1b01-4cd5-aa10-dc8296deb647"]},
+Open],ExpressionUUID -> "3e907d86-5794-448c-8c8b-2b393637a03b"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Expand","[",RowBox[{RowBox[{RowBox[{"FullSimplify","[",RowBox[
+{"D","[",RowBox[{RowBox[{"F","[",RowBox[{"a",",","b"}],"]"}],",",RowBox[{"{",RowBox[
+{"a",",","2"}],"}"}],",",RowBox[{"{",RowBox[{"b",",","2"}],"}"}]}],"]"}],"]"}],"/.",RowBox[
+{"a","\[Rule]","0"}]}],"/.",RowBox[{"b","\[Rule]","0"}]}],"]"}]],"Input",CellLabel -> "In[24]:= ",
+ExpressionUUID -> "7ea979fc-afad-4600-af2f-0619648aa801"],Cell[
+BoxData[RowBox[{RowBox[
+{SubsuperscriptBox["\[Mu]","X","2"]," ",SubsuperscriptBox["\[Mu]","Y","2"]}],"+",RowBox[
+{SubsuperscriptBox["\[Mu]","Y","2"]," ",SubscriptBox["\[Sigma]","11"]}],"+",RowBox[
+{"4"," ",SubscriptBox["\[Mu]","X"]," ",SubscriptBox["\[Mu]","Y"]," ",SubscriptBox[
+"\[Sigma]","12"]}],"+",RowBox[{"2"," ",SubsuperscriptBox["\[Sigma]","12","2"]}],"+",RowBox[
+{SubsuperscriptBox["\[Mu]","X","2"]," ",SubscriptBox["\[Sigma]","22"]}],"+",RowBox[
+{SubscriptBox["\[Sigma]","11"]," ",SubscriptBox["\[Sigma]","22"]}]}],StandardForm],
+"Output",CellLabel -> "Out[24]= ",ExpressionUUID -> "f7650d82-73ba-4725-8428-44044c81af11"]},
+Open],ExpressionUUID -> "aa912585-caf6-4d9e-875f-9e2218bf6955"],Cell[
+TextData[{"Calculate"," ",Cell[
+BoxData[
+TemplateBox[Association["boxes" -> FormBox[RowBox[{StyleBox["C","TI"],StyleBox["o",
+"TI"],StyleBox["v","TI"],RowBox[{"(",RowBox[{SuperscriptBox[StyleBox["X","TI"],"2"],",",SuperscriptBox[
+StyleBox["Y","TI"],"2"]}],")"}]}],TraditionalForm],"errors" -> {},"input" -> "Cov(X^2,Y^2)",
+"state" -> "Boxes"],"TeXAssistantTemplate"]],ExpressionUUID -> "4262a24b-bb7a-48b6-8ec3-383cffe8962d"]}],
+"Text",ExpressionUUID -> "a365b5a3-5094-4f5a-8289-7a8f86adc91e"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Simplify","[",RowBox[{RowBox[{"Expand","[",RowBox[{RowBox[
+{RowBox[{"FullSimplify","[",RowBox[{"D","[",RowBox[{RowBox[{"F","[",RowBox[{"a",",","b"}],"]"}],",",RowBox[
+{"{",RowBox[{"a",",","2"}],"}"}],",",RowBox[{"{",RowBox[{"b",",","2"}],"}"}]}],"]"}],"]"}],"/.",RowBox[
+{"a","\[Rule]","0"}]}],"/.",RowBox[{"b","\[Rule]","0"}]}],"]"}],"-",RowBox[{RowBox[
+{"("," ",RowBox[{TemplateBox[Association["boxes" -> FormBox[SubscriptBox["\[Sigma]",
+"11"],TraditionalForm],"errors" -> {},"input" -> "\\sigma_{11}","state" -> "Boxes"],
+"TeXAssistantTemplate"]," ","+"," ",RowBox[{TemplateBox[Association["boxes" -> FormBox[
+SubscriptBox["\[Mu]",StyleBox["X","TI"]],TraditionalForm],"errors" -> {},"input" -> "\\mu_X",
+"state" -> "Boxes"],"TeXAssistantTemplate"],"^","2"}]}],")"}],RowBox[{"("," ",RowBox[
+{TemplateBox[Association["boxes" -> FormBox[SubscriptBox["\[Sigma]","22"],TraditionalForm],
+"errors" -> {},"input" -> "\\sigma_{22}","state" -> "Boxes"],"TeXAssistantTemplate"],"+",RowBox[
+{TemplateBox[Association["boxes" -> FormBox[SubscriptBox["\[Mu]",StyleBox["Y","TI"]],
+TraditionalForm],"errors" -> {},"input" -> "\\mu_Y","state" -> "Boxes"],"TeXAssistantTemplate"],"^","2"}]}],")"}]}]}],"]"}]],
+"Input",CellLabel -> "In[23]:= ",ExpressionUUID -> "06b773fa-f6fb-473a-9f4d-488b176a51cd"],Cell[
+BoxData[
+RowBox[{"2"," ",SubscriptBox["\[Sigma]","12"]," ",RowBox[{"(",RowBox[{RowBox[{"2"," ",SubscriptBox[
+"\[Mu]","X"]," ",SubscriptBox["\[Mu]","Y"]}],"+",SubscriptBox["\[Sigma]","12"]}],")"}]}],
+StandardForm],"Output",CellLabel -> "Out[23]= ",ExpressionUUID -> "b6b32164-5aad-4a95-90f7-3c3c527be1e6"]},
+Open],ExpressionUUID -> "67e0ac7a-4990-4ce7-93b2-4a85acd9e6c7"],Cell[
+TextData[{"Calculate"," ",Cell[
+BoxData[
+TemplateBox[Association["boxes" -> FormBox[RowBox[{StyleBox["C","TI"],StyleBox["o",
+"TI"],StyleBox["v","TI"],RowBox[{"(",RowBox[{SubsuperscriptBox[StyleBox["X","TI"],
+"1","2"],"+",SubsuperscriptBox[StyleBox["Y","TI"],"1","2"],",",SubsuperscriptBox[
+StyleBox["X","TI"],"2","2"],"+",SubsuperscriptBox[StyleBox["Y","TI"],"2","2"]}],")"}]}],
+TraditionalForm],"errors" -> {},"input" -> "Cov(X_1^2+Y_1^2,X_2^2+Y_2^2)","state" -> "Boxes"],
+"TeXAssistantTemplate"]],ExpressionUUID -> "414bb924-6d0f-4454-95e1-eec78b924642"]}],
+"Text",ExpressionUUID -> "53462acd-1075-49c7-91d5-adf19acc7c86"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"FullSimplify","[",RowBox[{RowBox[{"2",RowBox[{"(",RowBox[
+{RowBox[{"1","/","2"}]," ",TemplateBox[Association["boxes" -> FormBox[SubsuperscriptBox[
+"\[CapitalGamma]","12",StyleBox["R","TI"]],TraditionalForm],"errors" -> {},"input" -> "\\Gamma^R_{12}",
+"state" -> "Boxes"],"TeXAssistantTemplate"]}],")"}],RowBox[{"(",RowBox[{RowBox[{"2"," ",TemplateBox[
+Association["boxes" -> FormBox[SubscriptBox["\[Mu]",SubscriptBox[StyleBox["X","TI"],
+"1"]],TraditionalForm],"errors" -> {},"input" -> "\\mu_{X_1}","state" -> "Boxes"],
+"TeXAssistantTemplate"],TemplateBox[Association["boxes" -> FormBox[SubscriptBox["\[Mu]",
+SubscriptBox[StyleBox["X","TI"],"2"]],TraditionalForm],"errors" -> {},"input" -> "\\mu_{X_2}",
+"state" -> "Boxes"],"TeXAssistantTemplate"]}],"+",RowBox[{RowBox[{"1","/","2"}]," ",TemplateBox[
+Association["boxes" -> FormBox[SubsuperscriptBox["\[CapitalGamma]","12",StyleBox[
+"R","TI"]],TraditionalForm],"errors" -> {},"input" -> "\\Gamma^R_{12}","state" -> "Boxes"],
+"TeXAssistantTemplate"]}]}],")"}]}],"+",RowBox[{"2",RowBox[{"(",RowBox[{RowBox[{"1","/","2"}]," ",TemplateBox[
+Association["boxes" -> FormBox[SubsuperscriptBox["\[CapitalGamma]","21",StyleBox[
+"I","TI"]],TraditionalForm],"errors" -> {},"input" -> "\\Gamma^I_{21}","state" -> "Boxes"],
+"TeXAssistantTemplate"]}],")"}],RowBox[{"(",RowBox[{RowBox[{"2"," ",TemplateBox[Association[
+"boxes" -> FormBox[SubscriptBox["\[Mu]",SubscriptBox[StyleBox["X","TI"],"1"]],TraditionalForm],
+"errors" -> {},"input" -> "\\mu_{X_1}","state" -> "Boxes"],"TeXAssistantTemplate"],TemplateBox[
+Association["boxes" -> FormBox[SubscriptBox["\[Mu]",SubscriptBox[StyleBox["Y","TI"],
+"2"]],TraditionalForm],"errors" -> {},"input" -> "\\mu_{Y_2}","state" -> "Boxes"],
+"TeXAssistantTemplate"]}],"+",RowBox[{RowBox[{"1","/","2"}]," ",TemplateBox[Association[
+"boxes" -> FormBox[SubsuperscriptBox["\[CapitalGamma]","21",StyleBox["I","TI"]],TraditionalForm],
+"errors" -> {},"input" -> "\\Gamma^I_{21}","state" -> "Boxes"],"TeXAssistantTemplate"]}]}],")"}]}],"+",RowBox[
+{"2",RowBox[{"(",RowBox[{RowBox[{"1","/","2"}]," ",TemplateBox[Association["boxes" -> FormBox[
+SubsuperscriptBox["\[CapitalGamma]","12",StyleBox["R","TI"]],TraditionalForm],"errors" -> {},
+"input" -> "\\Gamma^R_{12}","state" -> "Boxes"],"TeXAssistantTemplate"]}],")"}],RowBox[
+{"(",RowBox[{RowBox[{"2"," ",TemplateBox[Association["boxes" -> FormBox[SubscriptBox[
+"\[Mu]",SubscriptBox[StyleBox["Y","TI"],"1"]],TraditionalForm],"errors" -> {},"input" -> "\\mu_{Y_1}",
+"state" -> "Boxes"],"TeXAssistantTemplate"],TemplateBox[Association["boxes" -> FormBox[
+SubscriptBox["\[Mu]",SubscriptBox[StyleBox["Y","TI"],"2"]],TraditionalForm],"errors" -> {},
+"input" -> "\\mu_{Y_2}","state" -> "Boxes"],"TeXAssistantTemplate"]}],"+",RowBox[
+{RowBox[{"1","/","2"}]," ",TemplateBox[Association["boxes" -> FormBox[SubsuperscriptBox[
+"\[CapitalGamma]","12",StyleBox["R","TI"]],TraditionalForm],"errors" -> {},"input" -> "\\Gamma^R_{12}",
+"state" -> "Boxes"],"TeXAssistantTemplate"]}]}],")"}]}],"+",RowBox[{"2",RowBox[{"(",RowBox[
+{RowBox[{RowBox[{"-","1"}],"/","2"}]," ",TemplateBox[Association["boxes" -> FormBox[
+SubsuperscriptBox["\[CapitalGamma]","21",StyleBox["I","TI"]],TraditionalForm],"errors" -> {},
+"input" -> "\\Gamma^I_{21}","state" -> "Boxes"],"TeXAssistantTemplate"]}],")"}],RowBox[
+{"(",RowBox[{RowBox[{"2"," ",TemplateBox[Association["boxes" -> FormBox[SubscriptBox[
+"\[Mu]",SubscriptBox[StyleBox["Y","TI"],"1"]],TraditionalForm],"errors" -> {},"input" -> "\\mu_{Y_1}",
+"state" -> "Boxes"],"TeXAssistantTemplate"],TemplateBox[Association["boxes" -> FormBox[
+SubscriptBox["\[Mu]",SubscriptBox[StyleBox["X","TI"],"2"]],TraditionalForm],"errors" -> {},
+"input" -> "\\mu_{X_2}","state" -> "Boxes"],"TeXAssistantTemplate"]}],"-",RowBox[
+{RowBox[{"1","/","2"}]," ",TemplateBox[Association["boxes" -> FormBox[SubsuperscriptBox[
+"\[CapitalGamma]","21",StyleBox["I","TI"]],TraditionalForm],"errors" -> {},"input" -> "\\Gamma^I_{21}",
+"state" -> "Boxes"],"TeXAssistantTemplate"]}]}],")"}]}]}],"]"}]],"Input",CellLabel -> "In[28]:= ",
+ExpressionUUID -> "b76cea13-472c-4f11-9261-884879123e1c"],Cell[
+BoxData[RowBox[{SubsuperscriptBox[
+"\[CapitalGamma]","12",RowBox[{"2"," ","R"}]],"+",RowBox[{SubsuperscriptBox["\[CapitalGamma]",
+"21","\[ImaginaryI]"]," ",RowBox[{"(",RowBox[{SubsuperscriptBox["\[CapitalGamma]",
+"21","\[ImaginaryI]"],"-",RowBox[{"2"," ",SubscriptBox["\[Mu]",SubscriptBox["X","2"]]," ",SubscriptBox[
+"\[Mu]",SubscriptBox["Y","1"]]}],"+",RowBox[{"2"," ",SubscriptBox["\[Mu]",SubscriptBox[
+"X","1"]]," ",SubscriptBox["\[Mu]",SubscriptBox["Y","2"]]}]}],")"}]}],"+",RowBox[
+{"2"," ",SubsuperscriptBox["\[CapitalGamma]","12","R"]," ",RowBox[{"(",RowBox[{RowBox[
+{SubscriptBox["\[Mu]",SubscriptBox["X","1"]]," ",SubscriptBox["\[Mu]",SubscriptBox[
+"X","2"]]}],"+",RowBox[{SubscriptBox["\[Mu]",SubscriptBox["Y","1"]]," ",SubscriptBox[
+"\[Mu]",SubscriptBox["Y","2"]]}]}],")"}]}]}],StandardForm],"Output",CellLabel -> "Out[28]= ",
+ExpressionUUID -> "8299b487-bbf3-4d13-9ff5-154d13e1138f"]},Open],ExpressionUUID -> "d13c443c-7b19-400e-9a83-92c9e33a2a26"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Expand","[",RowBox[{RowBox[{"("," ",RowBox[{TemplateBox[Association[
+"boxes" -> FormBox[SubscriptBox["\[Mu]",SubscriptBox[StyleBox["X","TI"],"2"]],TraditionalForm],
+"errors" -> {},"input" -> "\\mu_{X_2}","state" -> "Boxes"],"TeXAssistantTemplate"],"-",RowBox[
+{TemplateBox[Association["boxes" -> FormBox[SubscriptBox["\[Mu]",SubscriptBox[StyleBox[
+"Y","TI"],"2"]],TraditionalForm],"errors" -> {},"input" -> "\\mu_{Y_2}","state" -> "Boxes"],
+"TeXAssistantTemplate"]," ","I"}]}],")"}],RowBox[{"("," ",RowBox[{TemplateBox[Association[
+"boxes" -> FormBox[SubsuperscriptBox["\[CapitalGamma]","21",StyleBox["R","TI"]],TraditionalForm],
+"errors" -> {},"input" -> "\\Gamma^R_{21}","state" -> "Boxes"],"TeXAssistantTemplate"],"+",RowBox[
+{"I"," "," ",TemplateBox[Association["boxes" -> FormBox[SubsuperscriptBox["\[CapitalGamma]",
+"21",RowBox[{StyleBox["I","TI"],StyleBox["m","TI"]}]],TraditionalForm],"errors" -> {},
+"input" -> "\\Gamma^{Im}_{21}","state" -> "Boxes"],"TeXAssistantTemplate"]}]}],")"}],RowBox[
+{"("," ",RowBox[{TemplateBox[Association["boxes" -> FormBox[SubscriptBox["\[Mu]",
+SubscriptBox[StyleBox["X","TI"],"1"]],TraditionalForm],"errors" -> {},"input" -> "\\mu_{X_1}",
+"state" -> "Boxes"],"TeXAssistantTemplate"],"+",RowBox[{TemplateBox[Association["boxes" -> FormBox[
+SubscriptBox["\[Mu]",SubscriptBox[StyleBox["Y","TI"],"1"]],TraditionalForm],"errors" -> {},
+"input" -> "\\mu_{Y_1}","state" -> "Boxes"],"TeXAssistantTemplate"]," ","I"}]}],")"}]}],"]"}]],
+"Input",CellLabel -> "In[2]:= ",ExpressionUUID -> "53d8a022-563b-495e-a128-379a9916a157"],Cell[
+BoxData[
+RowBox[{RowBox[{"\[ImaginaryI]"," ",SubsuperscriptBox["\[CapitalGamma]","21",RowBox[
+{"\[ImaginaryI]"," ","m"}]]," ",SubscriptBox["\[Mu]",SubscriptBox["X","1"]]," ",SubscriptBox[
+"\[Mu]",SubscriptBox["X","2"]]}],"+",RowBox[{SubsuperscriptBox["\[CapitalGamma]",
+"21","R"]," ",SubscriptBox["\[Mu]",SubscriptBox["X","1"]]," ",SubscriptBox["\[Mu]",
+SubscriptBox["X","2"]]}],"-",RowBox[{SubsuperscriptBox["\[CapitalGamma]","21",RowBox[
+{"\[ImaginaryI]"," ","m"}]]," ",SubscriptBox["\[Mu]",SubscriptBox["X","2"]]," ",SubscriptBox[
+"\[Mu]",SubscriptBox["Y","1"]]}],"+",RowBox[{"\[ImaginaryI]"," ",SubsuperscriptBox[
+"\[CapitalGamma]","21","R"]," ",SubscriptBox["\[Mu]",SubscriptBox["X","2"]]," ",SubscriptBox[
+"\[Mu]",SubscriptBox["Y","1"]]}],"+",RowBox[{SubsuperscriptBox["\[CapitalGamma]",
+"21",RowBox[{"\[ImaginaryI]"," ","m"}]]," ",SubscriptBox["\[Mu]",SubscriptBox["X",
+"1"]]," ",SubscriptBox["\[Mu]",SubscriptBox["Y","2"]]}],"-",RowBox[{"\[ImaginaryI]"," ",SubsuperscriptBox[
+"\[CapitalGamma]","21","R"]," ",SubscriptBox["\[Mu]",SubscriptBox["X","1"]]," ",SubscriptBox[
+"\[Mu]",SubscriptBox["Y","2"]]}],"+",RowBox[{"\[ImaginaryI]"," ",SubsuperscriptBox[
+"\[CapitalGamma]","21",RowBox[{"\[ImaginaryI]"," ","m"}]]," ",SubscriptBox["\[Mu]",
+SubscriptBox["Y","1"]]," ",SubscriptBox["\[Mu]",SubscriptBox["Y","2"]]}],"+",RowBox[
+{SubsuperscriptBox["\[CapitalGamma]","21","R"]," ",SubscriptBox["\[Mu]",SubscriptBox[
+"Y","1"]]," ",SubscriptBox["\[Mu]",SubscriptBox["Y","2"]]}]}],StandardForm],"Output",
+CellLabel -> "Out[2]= ",ExpressionUUID -> "a7d1635e-5123-4449-8987-d28dbb74d2b7"]},
+Open],ExpressionUUID -> "efcdb66c-53b0-4306-a658-1aa462f4cb62"],Cell[
+BoxData[""],
+"Input",ExpressionUUID -> "1504e086-1f40-4e2f-9ce3-a21441e7bb58"]},StyleDefinitions -> "Chatbook.nb",
+FrontEndVersion -> "14.2 for Wolfram Cloud 1.70.1 (December 30, 2024)"]
